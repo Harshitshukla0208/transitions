@@ -1,14 +1,9 @@
-/* src/transitions/Inner/style.module.scss */
-.inner {
+.inner{
     background-color: black;
-    min-height: 100vh;
-    position: relative;
-
-    .page {
+    .page{
         background-color: white;
     }
-
-    .slide {
+    .slide{
         height: 100vh;
         width: 100%;
         position: fixed;
@@ -17,43 +12,4 @@
         background-color: white;
         z-index: 1;
     }
-}
-
-.content {
-    background-color: white;
-    padding-top: 4rem; // Adjust based on header height
-}
-
-.header {
-    background-color: #2d3748; // Dark gray color
-    color: white;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 20;
-}
-
-.headerContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.headerLink {
-    font-size: 1.25rem; // Equivalent to text-xl
-    font-weight: 600; // Equivalent to font-semibold
-    color: white;
-    text-decoration: none;
-}
-
-.headerLink:hover {
-    color: #e2e8f0; // Equivalent to hover:text-gray-400
-}
-
-.mainContent {
-    padding-top: 4rem; // Ensure content starts below the fixed header
 }

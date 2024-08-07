@@ -61,27 +61,16 @@ const Inner = ({ children }) => {
 
     return (
         <div className={styles.inner}>
-            <motion.div {...anim(slide)} className={styles.slide} />
-            <motion.div {...anim(perspective)} className={styles.content}>
+            <motion.div className={styles.slide} {...anim(slide)}/>
+            <motion.div className={styles.page} {...anim(perspective)}>
                 <motion.div {...anim(opacity)}>
-                    <header className={styles.header}>
-                        <div className={styles.headerContainer}>
-                            <Link href="/" className={styles.headerLink}>
-                                Home
-                            </Link>
-                            <Link href="/contact" className={styles.headerLink}>
-                                Contact
-                            </Link>
-                            <Link href="/about" className={styles.headerLink}>
-                                About
-                            </Link>
-                        </div>
-                    </header>
-                    <main className={styles.mainContent}>
-                        {children}
-                    </main>
+                    <div className={styles.header}>
+                        <Link href="/">Home</Link>
+                        <Link href="/about">About</Link>
+                        <Link href="/contact">Contact</Link>
+                    </div>
+                    {children}
                 </motion.div>
-
             </motion.div>
         </div>
     );
